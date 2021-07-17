@@ -1,0 +1,63 @@
+{# secondary-menu #}
+<div id="menuSecondary" class="w-background-header-footer">
+    <nav class="uk-container uk-container-large" uk-navbar>
+
+        <div class="uk-navbar-right">
+            {% if menuSecondary %}
+                <ul class="uk-navbar-nav">
+                {% for item in menuSecondary.get_items %}
+                    <li class="{% if item.current %}uk-active{% endif %}">
+                        <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+                    </li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+    </nav>
+</div>
+
+{# main-menu #}
+<nav class="uk-container uk-container-large" uk-navbar>
+
+    <div class="uk-nav-left">
+        <a class="uk-navbar-item uk-logo" href="{{site.url}}">
+            <svg><use href="#logo"></svg>
+        </a>
+    </div>
+
+    <div class="uk-navbar-right">
+        {% if menuPrimary %}
+            <ul class="uk-navbar-nav uk-visible@m">
+            {% for item in menuPrimary.get_items %}
+                <li class="{% if item.current %}uk-active{% endif %}">
+                    <a target="{{ item.target }}" href="{{ item.link }}">
+                        <span class="uk-text-uppercase {{ item.classes | join(' ') }}">{{ item.title }}</span>
+                    </a>
+                </li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+        <a class="uk-navbar-toggle uk-navbar-item uk-hidden@m" data-uk-toggle data-uk-navbar-toggle-icon href="#w-mobile-menu"></a>
+    </div>
+
+</nav>
+
+
+<div id="w-mobile-menu" uk-offcanvas="flip: true">
+    <div class="uk-offcanvas-bar uk-background-primary">
+
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+        {% if menuPrimary %}
+            <ul class="uk-nav">
+            {% for item in menuPrimary.get_items %}
+                <li class="{% if item.current %}uk-active{% endif %}">
+                    <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+                </li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+
+    </div>
+</div>

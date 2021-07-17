@@ -1,0 +1,21 @@
+<section class="uk-section">
+    <div class="uk-container">
+
+        {# copyright #}
+        <div class="uk-text-small uk-margin-remove-top" uk-grid>
+            <p class="uk-margin-remove-bottom uk-margin-small-right uk-width-auto">
+                {{ options.copyright }}
+            </p>
+            {% if menuFooter %}
+                <ul class="uk-subnav uk-margin-remove uk-width-expand@s">
+                {% for item in menuFooter.get_items %}
+                    <li class="{% if item.current %}uk-active{% endif %}">
+                        <a class="uk-text-capitalize" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+                    </li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+    </div>
+</section>
