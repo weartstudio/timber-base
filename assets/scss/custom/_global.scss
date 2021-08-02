@@ -1,0 +1,7 @@
+.w-background-gradient{
+    background: $c-gray;
+    background: -moz-linear-gradient(180deg, $c-gray 0%, rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient(180deg, $c-gray 0%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(180deg, $c-gray 0%, rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$c-gray",endColorstr="#00d4ff",GradientType=1);
+}

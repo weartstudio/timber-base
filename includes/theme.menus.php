@@ -16,8 +16,6 @@ Class MenusHandler extends Singleton
                 'primary'       => 'Primary',
                 'secondary'     => 'Secondary',
                 'footer'        => 'Footer',
-                'footerCompany' => 'Footer Company',
-                'footerOngo'    => 'Footer ongo'
             )
         );
     }
