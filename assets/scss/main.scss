@@ -1,0 +1,72 @@
+// 1. Own variables
+$c-main: #1f4b99;
+$c-secondary: #29b5ba;
+$c-light: #EAF4FC;
+$c-light-dark: #B8CBED;
+$c-main-dark: #141C3E;
+
+$c-black: #0d0d0d;
+$c-gray: #efefef;
+$c-white: #ffffff;
+
+$c-yellow: #EFE239;
+$c-light-yellow: #FBFBCD;
+
+$c-blue: #64C1DF;
+$c-light-blue: #E5F4F9;
+
+$c-button-grey: #D7DBEC;
+
+$fs-xsmall: 12px;
+$fs-small: 14px;
+$fs-normal: 16px;
+$fs-big: 18px;
+$fs-large: 24px;
+$fs-xlarge: 28px;
+$fs-title: 36px;
+$fs-subtitle: 20px;
+
+$fw-bold: bold;
+
+// UIKIT VARS
+$global-color: $c-black;
+$global-primary-background: $c-main;
+$global-secondary-background: $c-secondary;
+$global-muted-background: $c-gray;
+$inverse-button-secondary-background: $c-secondary;
+$inverse-button-secondary-color: $c-white;
+$inverse-button-secondary-hover-color: $c-white;
+$inverse-button-secondary-active-color: $c-white;
+$inverse-navbar-nav-item-color: $c-white;
+$navbar-nav-item-height: 91px;
+$global-small-font-size: $fs-small;
+$global-font-family:  Arial, Helvetica, sans-serif;
+$base-heading-font-weight: $fw-bold;
+$global-emphasis-color: $c-main;
+$global-2xlarge-font-size: 36px;
+$global-xlarge-font-size: 36px;
+$text-lead-color: $c-black;
+$container-max-width: 1180px;
+$container-xsmall-max-width: 644px;
+$container-small-max-width: 775px;
+$container-large-max-width: 1180px;
+$card-default-background: $c-light;
+$inverse-global-color: $c-light-dark;
+$inverse-global-muted-color: $c-light-dark;
+$inverse-global-color: $c-light-dark;
+
+// 2. Import default variables and available mixins.
+@import "variables-theme";
+@import "mixins-theme";
+
+// 3. Your custom mixin overwrites.
+@mixin hook-card() {
+	color: #000;
+}
+
+// 4. Import UIkit.
+@import "uikit-theme";
+
+// 5. Custom styles
+// - ha van alulvonás, akkor sass-nál nem kell a .css-t kiírni
+@import "custom/import";
