@@ -1,7 +1,8 @@
 {
   "main": "index.js",
   "dependencies": {
-    "sass": "^1.35.2"
+    "sass": "^1.63.6",
+    "uikit": "^3.16.22"
   },
   "scripts": {
     "sass": "sass --watch --style=compressed assets/scss/main.scss:assets/css/style.min.css"
