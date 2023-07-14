@@ -12,6 +12,8 @@ Class AcfFields extends Singleton
 
     function optionsPage()
     {
+
+		// acf options page datas
         acf_add_options_page(array(
             'page_title' 	=> 'Sablon alapvető beállításai',
             'menu_title'	=> 'Sablonbeállítások',
@@ -20,6 +22,9 @@ Class AcfFields extends Singleton
             'parent'        => 'themes.php',
             'redirect'		=> true
         ));
+
+        // add data to options page
+		$context['options'] = get_fields('option');
     }
 
 }

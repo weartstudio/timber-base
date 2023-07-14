@@ -16,9 +16,6 @@ class TimberSpec extends Timber\Site {
 		$context['menuSecondary']  = new Timber\Menu('secondary');
 		$context['menuFooter']  = new Timber\Menu('footer');
 
-		// acf options page datas
-		$context['options'] = get_fields('option');
-
 		// site stuff
 		$context['site']  = $this;
 
