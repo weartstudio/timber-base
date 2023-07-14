@@ -12,7 +12,7 @@ Class AssetsHandler extends Singleton
         if(!is_admin()) {
 
             // UI kit js
-            wp_enqueue_script( 'uikit', 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.16.22/css/uikit-core-rtl.min.css', [], '3.16.22', true );
+            wp_enqueue_script( 'uikit', 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.16.22/js/uikit.min.js', [], '3.16.22', true );
             wp_enqueue_script( 'uikit-icons', 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.16.22/js/uikit-icons.min.js', [], '3.16.22', true );
 
             // theme js
