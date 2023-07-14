@@ -18,8 +18,8 @@ Class Optimize extends Singleton
         }
 
         # no gutenberg editor
-        add_filter('use_block_editor_for_post', '__return_false', 10);
-        add_action( 'wp_enqueue_scripts',  array($this, 'removeGutenbergStyle') );
+        // add_filter('use_block_editor_for_post', '__return_false', 10);
+        // add_action( 'wp_enqueue_scripts',  array($this, 'removeGutenbergStyle') );
 
         # slow hearthbeat
         add_filter( 'heartbeat_settings', function($settings) {

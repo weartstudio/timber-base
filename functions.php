@@ -15,7 +15,7 @@ define('THEME_TEXTDOMAIN', $currentTheme->get('TextDomain'));
 // textdomain load automatically
 load_theme_textdomain( 'THEME_TEXTDOMAIN', get_template_directory().'/languages' );
 
-$includes = glob(get_template_directory()."/includes/*.php");
+$includes = glob(get_template_directory()."/lib/*.php");
 if(is_array($includes)){
     foreach($includes as $include){
         require_once($include);

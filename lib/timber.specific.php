@@ -19,8 +19,10 @@ class TimberSpec extends Timber\Site {
 		// site stuff
 		$context['site']  = $this;
 
-		$context['footer']['warranty']  	= _('1 year Warranty');
-		$context['footer']['shipping']  	= _('Shipping Worldwide');
+		// acf options page options to context
+		if( class_exists('ACF') ):
+			$context['options'] = get_fields('option');
+		endif;
 
 		return $context;
 	}

@@ -23,8 +23,6 @@ Class AcfFields extends Singleton
             'redirect'		=> true
         ));
 
-        // add data to options page
-		$context['options'] = get_fields('option');
     }
 
 }
